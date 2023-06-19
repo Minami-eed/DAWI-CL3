@@ -1,0 +1,33 @@
+create database CL3_QUISPE;
+
+use CL3_QUISPE;
+
+create table tb_tipo(
+	cod_tipo int not null primary key,
+    nom_tipomascota varchar(45)
+);
+
+create table tb_mascotas(
+	cod_mascota int not null primary key,
+    nom_mascota varchar(45) not null,
+    cod_tipo int,
+    peso_mascota double not null,
+    fch_nacimiento date not null,
+    foreign key (cod_tipo) references tb_tipo (cod_tipo) 
+);
+
+insert into tb_tipo (cod_tipo, nom_tipomascota) values
+(1, 'Perro'),
+(2, 'Gato'),
+(3, 'Hámster'),
+(4, 'Ave'),
+(5, 'Pez');
+
+insert into tb_mascotas (cod_mascota, nom_mascota, cod_tipo, peso_mascota, fch_nacimiento) values
+(1,'Boby', 1, 25.00, '2022-07-15'),
+(2, 'Lulu', 2, 20.00, '2022-07-20'),
+(3, 'Darwin', 5, 10.15, '2023-01-01');
+
+SELECT * FROM tb_tipo;
+
+SELECT * FROM tb_mascotas;
