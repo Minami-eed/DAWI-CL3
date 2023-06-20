@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Registro de Citas</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
     <div class="container">
-        <h1>Registro de Citas</h1>
-        <form action="#" th:action="@{/Registrar}" th:object="${Registrar}" method="post">
-            <div class="form-group">
-                <label for="cod_mascota">Codigo: </label>
-                <input type="text" class="form-control" id="cod_mascota" th:field="*{cod_mascota}">
-            </div>
-            <div class="form-group">
-                <label for="nom_mascota">Nombre de la Mascota: </label>
-                <input type="text" class="form-control" id="nom_mascota" th:field="*{nom_mascota}">
-            </div>
-            <div class="form-group">
-                <label for="cod_tipo">Tipo: </label>
-                <select id="cod_tipo" class="form-control" th:field="*{cod_tipo}">
-                    <option value="0">Seleccione...</option>
-                    <option value="1">Perro</option>
-                    <option value="2">Gato</option>
-                    <option value="3">Hamster</option>
-                    <option value="4">Ave</option>
-                    <option value="5">Pez</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="peso_mascota">Peso: </label>
-                <input type="number" step="0.01" class="form-control" id="peso_mascota" th:field="*{peso_mascota}">
-            </div>
-            <div class="form-group">
-                <label for="fch_nacimiento">Fecha de Nacimiento: </label>
-                <input type="date" class="form-control" id="fch_nacimiento" th:field="*{fch_nacimiento}">
-            </div>
-            <button type="submit" class="btn btn-primary">Registrar</button>
+      <h1>Registro de Citas</h1>
+      <form th:action="@{/registrar}" th:object="${registrar}" method="post">
+        <div class="form-group">
+          <label for="cod_mascota">Codigo: </label>
+          <input
+            type="text"
+            class="form-control"
+            id="cod_mascota"
+            th:field="*{cod_mascota}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="nom_mascota">Nombre de la Mascota: </label>
+          <input
+            type="text"
+            class="form-control"
+            id="nom_mascota"
+            th:field="*{nom_mascota}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="cod_tipo">Tipo: </label>
+          <select id="cod_tipo" class="form-control" th:field="*{cod_tipo}">
+            <option value="0">Seleccione...</option>
+            <option value="1">Perro</option>
+            <option value="2">Gato</option>
+            <option value="3">Hamster</option>
+            <option value="4">Ave</option>
+            <option value="5">Pez</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="peso_mascota">Peso: </label>
+          <input
+            type="number"
+            step="0.01"
+            class="form-control"
+            id="peso_mascota"
+            th:field="*{peso_mascota}"
+          />
+        </div>
+        <div class="form-group">
+          <label for="fch_nacimiento">Fecha de Nacimiento: </label>
+          <input
+            type="date"
+            class="form-control"
+            id="fch_nacimiento"
+            th:field="*{fch_nacimiento}"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Registrar</button>
 
-            <button type="submit" class="btn btn-secondary">Consultar</button>
-        </form>
+        <button type="submit" class="btn btn-secondary">Consultar</button>
+      </form>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>

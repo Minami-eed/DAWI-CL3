@@ -75,4 +75,12 @@ public class Mascotas {
         return "Mascotas [cod_mascota=" + cod_mascota + ", nom_mascota=" + nom_mascota + ", cod_tipo=" + cod_tipo
                 + ", peso_mascota=" + peso_mascota + ", fch_nacimiento=" + fch_nacimiento + "]";
     }
+
+    public int getValue() {
+        return 0;
+    }
+
+    public String getLabel() {
+        return null;
+    }
 }
